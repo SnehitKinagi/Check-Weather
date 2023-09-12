@@ -68,7 +68,8 @@ app.get("/data",function(req,res)
 {
    res.render("data",{temp:temp,cityName:cityName,weatherDescription:weatherDescription,imageUrl:imageUrl,temp_min:temp_min,temp_max:temp_max,feels_like:feels_like});
 })
-app.listen(3000,function()
+let port=process.env.PORT||3000;
+app.listen(port,function()
 {
   console.log("server is runnig on port 3000.");
 })
